@@ -8,9 +8,10 @@ namespace EmpWage
 {
     internal class EmployeeWage
     {
+        const int ispresent = 1,Wage_Per_Hr =20,Full_Day_Hr=8;
         public void CheckAttendance()
         {
-            const int ispresent = 1;
+          
             Random random = new Random();
             int check = random.Next(0,2);
             if(check == ispresent )
@@ -21,6 +22,11 @@ namespace EmpWage
             {
                 Console.WriteLine("Employee is Absent");
             }
+        }
+        public void DailyWage()
+        {
+            int wage = Wage_Per_Hr * Full_Day_Hr;
+            Console.WriteLine("Daily Wage is => "+wage);
         }
         
     }
