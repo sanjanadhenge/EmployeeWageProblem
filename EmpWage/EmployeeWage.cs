@@ -8,7 +8,7 @@ namespace EmpWage
 {
     internal class EmployeeWage
     {
-        const int ispresent = 1,Wage_Per_Hr =20,Full_Day_Hr= 8, Part_Time_Hr = 4, Is_Full_Time = 0, Is_Part_Time = 1, Total_working_days = 20;
+        const int ispresent = 1,Wage_Per_Hr =20,Full_Day_Hr= 8, Part_Time_Hr = 4, Is_Full_Time = 0, Is_Part_Time = 1, Total_working_days = 20,Total_Working_hrs=100;
         public void CheckAttendance()
         {
           
@@ -27,7 +27,7 @@ namespace EmpWage
         {
 
             int empHrs = 0;
-            for(int i=0;i<Total_working_days;i++)
+            for(int i=0;i<Total_working_days && empHrs<=Total_Working_hrs;i++)
             {
                 Random random = new Random();
                 int check = random.Next(0, 3);
@@ -43,6 +43,7 @@ namespace EmpWage
                         empHrs += 0;
                         break;
                 }
+                
             }
            
 
