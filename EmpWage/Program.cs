@@ -16,6 +16,7 @@ namespace EmpWage
             employeeWage.DailyWage("Atos", 22, 18, 95);
             employeeWage.DailyWage("HCL", 24, 22, 102);
             employeeWage.DailyWage("BirlaSoft", 20, 25, 92);
+            employeeWage.DisplayCompanyWages();
         }
     }
 }
