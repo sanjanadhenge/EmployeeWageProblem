@@ -10,6 +10,7 @@ namespace EmpWage
     {
         public string companyName { get; set; }
         public int Totalwages { get; set; }
+ 
 
 
     }
