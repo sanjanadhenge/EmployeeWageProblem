@@ -25,10 +25,12 @@ namespace EmpWage
         }
         public void DailyWage()
         {
-
+            
             int empHrs = 0;
-            for(int i=0;i<Total_working_days && empHrs<=Total_Working_hrs;i++)
+            int i=0;
+            while(i < Total_working_days && empHrs <= 100)
             {
+                i++;
                 Random random = new Random();
                 int check = random.Next(0, 3);
                 switch (check)
@@ -48,7 +50,7 @@ namespace EmpWage
            
 
             int wage = Wage_Per_Hr * empHrs;
-            Console.WriteLine("Daily Wage " + wage);
+            Console.WriteLine("Total Wage " + wage);
         }
         
     }
