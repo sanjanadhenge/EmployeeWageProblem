@@ -8,6 +8,8 @@ namespace EmpWage
 {
     internal class EmployeeWage
     {
+        CompanyWage companyWage = new CompanyWage();
+        List<CompanyWage> list = new List<CompanyWage>();
         const int ispresent = 1,Full_Day_Hr= 8, Part_Time_Hr = 4, Is_Full_Time = 0, Is_Part_Time = 1;
         int[] TotalWage = new int[10];
         String[] Name = new String[10];
@@ -28,7 +30,9 @@ namespace EmpWage
         }
         public void DailyWage(String CompanyName, int Wage_Per_Hr, int Total_working_days, int Total_Working_Hrs)
         {
+            CompanyWage companyWage = new CompanyWage();
             Name[k] = CompanyName;
+            companyWage.companyName = CompanyName;
             k++;
             int empHrs = 0;
             int i=0;
@@ -52,17 +56,18 @@ namespace EmpWage
                 
             }
            
-
             int wage = Wage_Per_Hr * empHrs;
             TotalWage[j] = wage;
+            companyWage.Totalwages = wage;
             j++;
             Console.WriteLine(CompanyName + "---->" + "Total Wage =" + wage);
+            list.Add(companyWage);
         }
         public void DisplayCompanyWages()
         {
-            for(int i=0;i<4;i++ )
+            foreach(var item in list)
             {
-                Console.WriteLine("Company Name----> "+Name[i]+" Total Wage => " + TotalWage[i]);
+                Console.WriteLine("Company Name => "+item.companyName +"Total Wage =>" + item.Totalwages);
             }
         }
     }
