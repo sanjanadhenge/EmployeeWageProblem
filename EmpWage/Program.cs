@@ -10,7 +10,7 @@ namespace EmpWage
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("----Welcome to Employee Wage Computation----");
+            Console.WriteLine("<----Welcome to Employee Wage Computation---->");
             EmployeeWage employeeWage = new EmployeeWage();
             employeeWage.DailyWage("Reliance", 20, 20, 100);
             employeeWage.DailyWage("Atos", 22, 18, 95);
