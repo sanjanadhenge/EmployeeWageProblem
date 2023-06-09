@@ -12,7 +12,10 @@ namespace EmpWage
         {
             Console.WriteLine("----Welcome to Employee Wage Computation----");
             EmployeeWage employeeWage = new EmployeeWage();
-            employeeWage.DailyWage();
+            employeeWage.DailyWage("Reliance", 20, 20, 100);
+            employeeWage.DailyWage("Atos", 22, 18, 95);
+            employeeWage.DailyWage("HCL", 24, 22, 102);
+            employeeWage.DailyWage("BirlaSoft", 20, 25, 92);
         }
     }
 }

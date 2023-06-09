@@ -8,7 +8,7 @@ namespace EmpWage
 {
     internal class EmployeeWage
     {
-        const int ispresent = 1,Wage_Per_Hr =20,Full_Day_Hr= 8, Part_Time_Hr = 4, Is_Full_Time = 0, Is_Part_Time = 1, Total_working_days = 20,Total_Working_hrs=100;
+        const int ispresent = 1,Full_Day_Hr= 8, Part_Time_Hr = 4, Is_Full_Time = 0, Is_Part_Time = 1;
         public void CheckAttendance()
         {
           
@@ -23,7 +23,7 @@ namespace EmpWage
                 Console.WriteLine("Employee is Absent");
             }
         }
-        public void DailyWage()
+        public void DailyWage(String CompanyName, int Wage_Per_Hr, int Total_working_days, int Total_Working_Hrs)
         {
             
             int empHrs = 0;
@@ -50,7 +50,7 @@ namespace EmpWage
            
 
             int wage = Wage_Per_Hr * empHrs;
-            Console.WriteLine("Total Wage " + wage);
+            Console.WriteLine(CompanyName + "---->" + "Total Wage =" + wage);
         }
         
     }
