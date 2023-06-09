@@ -62,7 +62,7 @@ namespace EmpWage
         {
             for(int i=0;i<4;i++ )
             {
-                Console.WriteLine("Company Name----> "+Name[i]+" Total Wage----> " + TotalWage[i]);
+                Console.WriteLine("Company Name----> "+Name[i]+" Total Wage => " + TotalWage[i]);
             }
         }
     }
