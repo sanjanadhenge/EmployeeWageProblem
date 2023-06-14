@@ -17,6 +17,13 @@ namespace EmpWage
             employeeWage.DailyWage("HCL", 24, 22, 102);
             employeeWage.DailyWage("BirlaSoft", 20, 25, 92);
             employeeWage.DisplayCompanyWages();
+            Console.WriteLine("<----Welcome to Employee Wage Computation using OOPS Concepts---->");
+            Finalsolution finalsolution = new Finalsolution();
+            finalsolution.AddCompanyWage("Reliance", 20, 20, 100);
+            finalsolution.AddCompanyWage("Atos", 22, 18, 95);
+            finalsolution.AddCompanyWage("HCL", 24, 22, 102);
+            Console.WriteLine("Total Wage for HCL : "+finalsolution.GetTotalWage("HCL"));
+
         }
     }
 }
